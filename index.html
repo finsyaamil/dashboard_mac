@@ -1503,6 +1503,118 @@
 
 
 </style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap">
+<style id="theme-syaamil">
+  .shell-brand .logo{ background:#fff; border-radius:12px; padding:8px 10px; display:flex; align-items:center; justify-content:center; }
+  .shell-brand .logo img{ display:block; width:100%; max-width:150px; height:auto; }
+  /* ============ TEMA SYAAMIL GROUP (diterapkan ke SDI) ============ */
+  :root{ --shell-sans:'Public Sans',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif; --shell-mono:var(--shell-sans); --shell-serif:var(--shell-sans); --shell-sidebar-w:212px;
+    --shell-gold:#0e56a4; --shell-line:#e6ebf2; --shell-panel:#f6f8fb; --shell-ink:#1e293b; --shell-ink-dim:#4b5a6c; }
+  #dash-overview,#dash-budget,#dash-cashmgmt,#dash-analysis,#dash-ar,#dash-ap,#dash-inventory,#dash-pnl,#dash-balancesheet{
+    --bg:#f2f5f9; --panel:#ffffff; --panel-2:#f6f8fb; --line:#e6ebf2; --ink:#1e293b; --ink-dim:#4b5a6c; --ink-faint:#6b7a8c;
+    --gold:#0e56a4; --gold-dim:#8fb3dd; --brand:#0e56a4; --brand2:#f7941d; --hd:#0e56a4; --sk:#e8f0fa; --hl:#fff4c2; --green:#1c7c5c; --neg:#b23a48;
+    --sans:var(--shell-sans); --mono:var(--shell-sans); --serif:var(--shell-sans); font-family:var(--shell-sans); background:#f2f5f9; font-variant-numeric:tabular-nums; }
+  html, body{ background:#f2f5f9; font-family:var(--shell-sans); }
+  .shell-frame{ background:#f2f5f9; }
+  .shell-sidebar{ margin:12px 0 12px 12px; height:calc(100vh - 24px); border:0; border-radius:22px; background:linear-gradient(180deg,#0e56a4,#0b4688); box-shadow:0 6px 18px rgba(14,86,164,.22); color:#fff; overflow-y:auto; }
+  .shell-brand{ flex-direction:column; align-items:stretch; gap:10px; padding:18px 14px 12px; border-bottom:1px solid rgba(255,255,255,.14); }
+  .shell-brand .mark{ width:auto; height:auto; background:#fff; background-image:none; border-radius:12px; padding:9px 10px; color:#0e56a4; font-weight:800; font-size:22px; letter-spacing:.14em; display:flex; align-items:center; justify-content:center; }
+  .shell-brand .txt{ text-align:center; }
+  .shell-brand .txt .co{ font-size:10.5px; font-weight:700; letter-spacing:.1em; color:#fff; }
+  .shell-brand .txt .name{ font-size:12px; font-weight:500; color:rgba(255,255,255,.8); }
+  .shell-nav{ padding:10px 0; gap:0; }
+  .shell-nav-label{ color:rgba(255,255,255,.6); font-size:10px; font-weight:700; letter-spacing:.12em; padding:8px 18px 6px; opacity:1; }
+  .shell-nav-btn{ font-family:var(--shell-sans); font-size:12.5px; font-weight:600; color:rgba(255,255,255,.82); background:transparent; border:0; border-left:3px solid transparent; border-radius:0; padding:11px 16px; }
+  .shell-nav-btn .ic{ width:7px; height:7px; border-radius:2px; background:rgba(255,255,255,.4); }
+  .shell-nav-btn:hover{ background:rgba(255,255,255,.08); color:#fff; }
+  .shell-nav-btn.active{ background:rgba(255,255,255,.12); color:#fff; font-weight:700; border-left-color:#f7941d; box-shadow:none; }
+  .shell-nav-btn.active .ic{ background:#f7941d; }
+  .shell-data-info{ border-top:1px solid rgba(255,255,255,.14) !important; color:rgba(255,255,255,.78) !important; font-family:var(--shell-sans) !important; }
+  .shell-data-info div:first-child{ color:#fff !important; }
+  .shell-foot{ color:rgba(255,255,255,.6); border-top-color:rgba(255,255,255,.14); opacity:1; }
+  button, select, input{ font-family:var(--shell-sans); }
+  @media (max-width:900px){ .shell-sidebar{ margin:0; height:auto; border-radius:0; } .shell-brand{ flex-direction:row; align-items:center; border-right:1px solid rgba(255,255,255,.14); border-bottom:0; } .shell-brand .txt{ text-align:left; } .shell-nav-btn{ border-left:0; border-bottom:3px solid transparent; } .shell-nav-btn.active{ border-bottom-color:#f7941d; } }
+</style>
+
+<style id="finratio-css">
+  .shell-nav-btn[data-page="dash-finratio"]{ --tab-accent: var(--shell-gold); }
+  /* ============ ANALISIS LAPORAN KEUANGAN PAGE (Tema Syaamil Group) ============ */
+  #dash-finratio {
+    --bg:#f2f5f9; --panel:#ffffff; --panel-2:#f6f8fb; --line:#e6ebf2;
+    --ink:#1e293b; --ink-dim:#4b5a6c; --ink-faint:#6b7a8c;
+    --brand:#0e56a4; --brand2:#f7941d; --hd:#0e56a4; --sk:#e8f0fa; --hl:#fff4c2; --sep:#1e293b;
+    --gold:#0e56a4; --gold-dim:#8fb3dd; --green:#1c7c5c; --neg:#b23a48;
+    --sans:'Public Sans',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif; --mono:var(--sans); --serif:var(--sans);
+    margin:0; padding:0; color:var(--ink); font-family:var(--sans); background:var(--bg); min-height:100vh;
+    font-size:12.5px; line-height:1.45; font-variant-numeric:tabular-nums;
+  }
+  #dash-finratio * { box-sizing:border-box; }
+  #dash-finratio .wrap2 { max-width:none; margin:0; padding:14px 18px 30px; position:relative; }
+  #dash-finratio .masthead { display:flex; justify-content:space-between; align-items:center; gap:16px 24px; flex-wrap:wrap; background:var(--panel); border-radius:16px; border-top:3px solid var(--brand2); padding:14px 18px; box-shadow:0 1px 3px rgba(16,24,40,.06); margin:0 0 12px; }
+  #dash-finratio .masthead-left h1 { font-family:var(--sans); font-weight:800; font-size:22px; line-height:1.2; margin:0; color:var(--brand); letter-spacing:0; }
+  #dash-finratio .masthead-left .sub { color:var(--ink-faint); font-size:12px; margin:4px 0 0; }
+  #dash-finratio .masthead-mid { display:flex; align-items:flex-end; gap:10px; flex-wrap:wrap; margin-left:auto; }
+  #dash-finratio .fr-fld { display:flex; flex-direction:column; gap:3px; }
+  #dash-finratio .fr-fld > span { font-size:11px; color:var(--ink-faint); }
+  #dash-finratio .masthead-right { text-align:right; font-size:11.5px; color:var(--ink-faint); line-height:1.6; min-width:150px; }
+  #dash-finratio .masthead-right .asof { color:var(--ink); font-size:12.5px; font-weight:600; }
+  #dash-finratio .masthead-right .asof span { color:var(--brand); font-weight:700; }
+  #dash-finratio select { font-family:var(--sans); font-size:12px; color:var(--ink); background:var(--panel-2); border:1px solid var(--line); border-radius:8px; padding:6px 9px; min-width:140px; cursor:pointer; }
+  #dash-finratio select:focus { outline:2px solid var(--gold-dim); outline-offset:1px; }
+  #dash-finratio .masthead button { font-family:var(--sans); font-size:12px; font-weight:700; padding:6px 14px; border:1px solid var(--brand); border-radius:8px; background:var(--panel); color:var(--brand); cursor:pointer; height:31px; }
+  #dash-finratio .masthead button:hover { background:var(--sk); }
+  #dash-finratio .fr-filter-note { font-size:11.5px; color:var(--ink-faint); line-height:1.6; padding:0 6px 12px; }
+  #dash-finratio .fr-filter-note b { color:var(--ink-dim); font-weight:600; }
+  #dash-finratio .panel { background:var(--panel); border:0; border-radius:16px; padding:14px; box-shadow:0 1px 3px rgba(16,24,40,.06); margin-bottom:12px; }
+  #dash-finratio .panel h2 { font-family:var(--sans); font-size:12px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-faint); margin:2px 0 2px; }
+  #dash-finratio .panel .panel-sub { font-family:var(--sans); font-size:11.5px; color:var(--ink-faint); margin-bottom:10px; }
+  #dash-finratio .fr-scroll { overflow:auto; border:1px solid var(--line); border-radius:10px; }
+  #dash-finratio table.fr-table { width:100%; border-collapse:collapse; font-size:12px; }
+  #dash-finratio table.fr-table th { text-align:left; padding:8px 10px; background:var(--hd); color:#fff; font-family:var(--sans); font-size:11px; font-weight:700; text-transform:none; letter-spacing:0; border-bottom:2px solid var(--sep); white-space:nowrap; position:sticky; top:0; z-index:2; }
+  #dash-finratio table.fr-table th.num, #dash-finratio table.fr-table td.num { text-align:right; }
+  #dash-finratio table.fr-table td { padding:6px 10px; border-bottom:1px solid var(--line); white-space:nowrap; }
+  #dash-finratio table.fr-table td.num { font-family:var(--sans); min-width:74px; }
+  #dash-finratio table.fr-table td:first-child, #dash-finratio table.fr-table th:first-child { position:sticky; left:0; background:var(--panel); z-index:1; min-width:290px; }
+  #dash-finratio table.fr-table th:first-child { background:var(--hd); z-index:3; }
+  #dash-finratio table.fr-table td.neg { color:var(--neg); }
+  #dash-finratio table.fr-table tr.fr-key td { font-weight:700; background:var(--hl); }
+  #dash-finratio table.fr-table tr.fr-key td:first-child { background:var(--hl); }
+  #dash-finratio table.fr-table tr.fr-sub td:first-child { padding-left:28px; color:var(--ink-dim); }
+  #dash-finratio table.fr-table tr.fr-sub td { color:var(--ink-dim); }
+  #dash-finratio table.fr-table tr.fr-sub td.neg { color:var(--neg); }
+  #dash-finratio table.fr-table tr.fr-memo td { font-style:italic; color:var(--ink-dim); }
+  #dash-finratio table.fr-table tr.fr-group td { font-family:var(--sans); font-size:11px; letter-spacing:.04em; text-transform:uppercase; font-weight:700; color:var(--brand); background:var(--sk); border-bottom:2px solid var(--sep); }
+  #dash-finratio table.fr-table tr.fr-group td:first-child { background:var(--sk); }
+  #dash-finratio table.fr-table td.fr-ytd, #dash-finratio table.fr-table th.fr-ytd { border-left:1.5px solid var(--sep); }
+  #dash-finratio .fr-note { font-family:var(--sans); font-size:11.5px; color:var(--ink-faint); line-height:1.7; margin-top:10px; }
+  #dash-finratio .fr-note b { color:var(--ink-dim); font-weight:600; }
+  #dash-finratio .fr-empty { padding:18px; font-size:12.5px; color:var(--ink-dim); }
+  #dash-finratio .fr-quad-ctl { display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:14px; font-size:11.5px; color:var(--ink-dim); }
+  #dash-finratio .fr-quad-ctl label { letter-spacing:.05em; text-transform:uppercase; font-weight:700; color:var(--brand); }
+  #dash-finratio .fr-quad-ctl label.fr-check { text-transform:none; letter-spacing:0; font-weight:400; color:var(--ink-dim); display:flex; align-items:center; gap:6px; cursor:pointer; }
+  #dash-finratio .fr-quad-ctl select { min-width:200px; }
+  #dash-finratio .fr-quad-ctl input[type=checkbox] { accent-color:var(--brand2); }
+  #dash-finratio .fr-quad { display:grid; grid-template-columns:auto minmax(0,1fr) auto; grid-template-rows:auto auto auto; gap:10px 12px; max-width:880px; margin:6px auto 0; align-items:center; }
+  #dash-finratio .fr-qa { font-size:12px; font-weight:800; letter-spacing:.06em; color:var(--brand); white-space:nowrap; }
+  #dash-finratio .fr-qa-top { grid-column:2; grid-row:1; text-align:center; }
+  #dash-finratio .fr-qa-left { grid-column:1; grid-row:2; text-align:right; }
+  #dash-finratio .fr-qa-right { grid-column:3; grid-row:2; }
+  #dash-finratio .fr-qa-bottom { grid-column:2; grid-row:3; text-align:center; }
+  #dash-finratio .fr-qgrid { grid-column:2; grid-row:2; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:minmax(160px,auto) minmax(160px,auto); gap:3px; background:#fff; border:3px solid #fff; border-radius:12px; overflow:hidden; box-shadow:0 0 0 1px var(--line); }
+  #dash-finratio .fr-q { padding:14px 18px; color:#1e293b; }
+  #dash-finratio .fr-q.q1 { background:#dcf2e3; }
+  #dash-finratio .fr-q.q2, #dash-finratio .fr-q.q3 { background:#fff4c2; }
+  #dash-finratio .fr-q.q4 { background:#fbe0e0; }
+  #dash-finratio .fr-q-head { display:flex; justify-content:space-between; align-items:baseline; gap:8px; }
+  #dash-finratio .fr-q-title { font-weight:800; font-size:13px; letter-spacing:.05em; }
+  #dash-finratio .fr-q-count { font-size:11px; color:rgba(30,41,59,.62); }
+  #dash-finratio .fr-q-sub { font-size:11px; color:rgba(30,41,59,.7); margin:2px 0 12px; }
+  #dash-finratio .fr-q-months { display:flex; flex-wrap:wrap; gap:8px 16px; }
+  #dash-finratio .fr-chip { font-size:13px; font-weight:700; cursor:default; }
+  #dash-finratio .fr-chip.prov { font-weight:400; font-style:italic; border-bottom:1px dashed rgba(30,41,59,.65); }
+  #dash-finratio .fr-q-none { color:rgba(30,41,59,.38); }
+</style>
+
 </head>
 <body>
 
@@ -1653,7 +1765,7 @@ window.__DATA__ = {lpk: {"months": ["Des 25", "Jan 26", "Feb 26", "Mar 26", "Apr
   <div class="shell-frame">
   <div class="shell-sidebar">
     <div class="shell-brand">
-      <div class="mark">S</div>
+      <div class="logo"><img src="data:image/png;base64,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" alt="Syaamil Group"></div>
       <div class="txt">
         <div class="co">Syaamil Group · FP&amp;A</div>
         <div class="name">Dashboard Keuangan</div>
@@ -1666,6 +1778,8 @@ window.__DATA__ = {lpk: {"months": ["Des 25", "Jan 26", "Feb 26", "Mar 26", "Apr
       <button class="shell-nav-btn" data-page="dash-pnl"><span class="ic"></span>Profit &amp; Loss</button>
       <button class="shell-nav-btn" data-page="dash-balancesheet"><span class="ic"></span>Balance Sheet</button>
       <button class="shell-nav-btn" data-page="dash-cashmgmt"><span class="ic"></span>Cash Management</button>
+      <button class="shell-nav-btn" data-page="dash-finratio"><span class="ic"></span>Analisis Laporan Keuangan</button>
+
       <button class="shell-nav-btn" data-page="dash-analysis"><span class="ic"></span>Analysis Sales Order</button>
       <button class="shell-nav-btn" data-page="dash-ar"><span class="ic"></span>AR / Piutang MAC</button>
       <button class="shell-nav-btn" data-page="dash-ap"><span class="ic"></span>AP / Hutang MAC</button>
@@ -2788,6 +2902,102 @@ window.__DATA__ = {lpk: {"months": ["Des 25", "Jan 26", "Feb 26", "Mar 26", "Apr
   <footer>Dashboard dibuat otomatis dari data Saldo, Cash Flow, Schedule &amp; Cash Projection · Syaamil Group FP&amp;A</footer>
 </div>
 
+    </div>
+  </div>
+
+  <div class="shell-page" id="page-dash-finratio">
+    <div id="dash-finratio">
+      <div class="wrap2">
+
+        <div class="masthead">
+          <div class="masthead-left">
+            <h1>Analisis Laporan Keuangan</h1>
+            <p class="sub">MAC &middot; Rasio profitabilitas, likuiditas, aktivitas &amp; arus kas &middot; per bulan &middot; <span id="frYear">2026</span></p>
+          </div>
+          <div class="masthead-mid">
+            <div class="fr-fld"><span>Dari bulan</span><select id="frFrom" aria-label="Dari bulan"></select></div>
+            <div class="fr-fld"><span>Sampai bulan</span><select id="frTo" aria-label="Sampai bulan"></select></div>
+            <button type="button" id="frReset">Reset</button>
+          </div>
+          <div class="masthead-right">
+            <div class="asof">Tutup buku s.d <span id="frAsOf">-</span></div>
+            <div id="frCfAsOf">-</div>
+          </div>
+        </div>
+        <div class="fr-filter-note" id="frFilterNote"></div>
+
+        <div class="panel">
+          <h2>1 &middot; Rasio Profitabilitas terhadap Pendapatan Bruto</h2>
+          <div class="panel-sub">Setiap baris = nilai akun &divide; Pendapatan Bruto bulan yang sama &middot; sumber: Laporan Laba Rugi</div>
+          <div class="fr-scroll"><table class="fr-table" id="frProfTable"></table></div>
+          <div class="fr-note">
+            <b>Cara baca:</b> YTD = akumulasi bulan yang tampil &divide; total Pendapatan Bruto periode yang sama. Diskon &amp; Retur dan HPP adalah pengurang (semakin kecil semakin baik).<br>
+            <b>Biaya Marketing</b> = Gaji + SPPD + Marketing Lainnya &middot; <b>Biaya Adum &amp; Operasional</b> = Gaji Adum + SPPD Adum + Operasional + Adum Lainnya &middot; <br><b>EBITDA</b> = GP &minus; Total Biaya Entitas &middot; <b>EBIT</b> = EBITDA &minus; Depresiasi &amp; Amortisasi &middot; <b>EBIT setelah Biaya Management</b> = EBIT &minus; Total Biaya Management &middot; <b>Net Profit</b> = EBIT setelah Biaya Management + Pendapatan Lain &minus; Biaya Lain (dihitung berantai dari komponen, sama seperti halaman Profit &amp; Loss).
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2>2 &middot; Rasio Likuiditas</h2>
+          <div class="panel-sub">Posisi akhir bulan &middot; sumber: Balance Sheet &middot; kolom pertama = saldo awal tahun</div>
+          <div class="fr-scroll"><table class="fr-table" id="frLiqTable"></table></div>
+          <div class="fr-note">
+            <b>Current Ratio</b> = Aset Lancar &divide; Liabilitas Lancar &middot; <b>Quick Ratio</b> = (Kas &amp; Bank + Piutang) &divide; Liabilitas Lancar &middot; <b>Cash Ratio</b> = Kas &amp; Bank &divide; Liabilitas Lancar &middot; <b>Modal Kerja Bersih</b> = Aset Lancar &minus; Liabilitas Lancar.<br>
+            Total Aset Lancar dan Liabilitas Lancar diambil dari baris subtotal laporan; <b>Aset Lancar Lainnya</b> = biaya dibayar dimuka &amp; pengeluaran sementara.
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2>3 &middot; Rasio Aktivitas</h2>
+          <div class="panel-sub">Perputaran &amp; hari per bulan &middot; sumber: Laba Rugi &amp; Balance Sheet &middot; saldo = rata-rata awal &amp; akhir bulan</div>
+          <div class="fr-scroll"><table class="fr-table" id="frActTable"></table></div>
+          <div class="fr-note">
+            <b>Perputaran</b> = basis &divide; rata-rata saldo (kali per bulan): piutang memakai Pendapatan Netto, persediaan &amp; hutang memakai HPP (pendekatan pembelian). <b>Hari</b> = rata-rata saldo &divide; basis &times; jumlah hari dalam bulan.<br>
+            <b>DSO</b> = hari penagihan piutang dagang &middot; <b>DIO</b> = hari persediaan &middot; <b>DPO</b> = hari pembayaran hutang dagang (akun Hutang Dagang di Balance Sheet; PO Receipt tidak termasuk) &middot; <b>CCC</b> = DSO + DIO &minus; DPO (semakin pendek semakin baik) &middot; <b>Perputaran Total Aset</b> = Pendapatan Netto &divide; rata-rata Total Aset (kali &times; 12 untuk setahun).<br>
+            Kolom YTD = akumulasi periode: perputaran dalam kali per periode, hari dihitung dari rata-rata saldo selama periode.
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2>4 &middot; Net Working Capital (Modal Kerja Bersih)</h2>
+          <div class="panel-sub">Posisi akhir bulan &middot; sumber: Balance Sheet &amp; Laba Rugi &middot; kolom pertama = saldo awal tahun</div>
+          <div class="fr-scroll"><table class="fr-table" id="frNwcTable"></table></div>
+          <div class="fr-note">
+            <b>NWC</b> = Aset Lancar &minus; Liabilitas Lancar (subtotal laporan) &middot; <b>NWC di luar Kas &amp; Bank</b> = NWC &minus; Kas &amp; Bank &middot; <b>Modal Kerja Dagang</b> = Piutang Dagang + Persediaan &minus; Hutang Dagang (bagian yang ditentukan siklus operasi: DSO, DIO, DPO) &middot; <b>NWC &divide; Pendapatan Netto setahun</b> = NWC &divide; (Pendapatan Netto bulan &times; 12).<br>
+            <b>Cara baca:</b> kenaikan NWC = kas tertahan di modal kerja (piutang atau persediaan naik, atau hutang turun) dan menekan CFO; penurunan NWC melepas kas. Warna merah hanya untuk saldo negatif &mdash; pada baris perubahan, tanda negatif berarti NWC turun.<span id="frNwcSummary"></span>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2>5 &middot; Arus Kas &mdash; Operasional, Investasi &amp; Pendanaan</h2>
+          <div class="panel-sub">Rp juta &middot; metode langsung &middot; sumber: laporan arus kas &middot; negatif = kas keluar / penurunan</div>
+          <div class="fr-scroll"><table class="fr-table" id="frCfTable"></table></div>
+          <div class="fr-note" id="frCfNote">
+            <b>Cara baca:</b> angka bersih per aktivitas diambil dari baris subtotal laporan. <b>Arus Kas Bebas</b> = Arus Kas Operasional + Investasi. Saldo Awal + Kenaikan (Penurunan) = Saldo Akhir.<span id="frCfPartial"></span>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2>6 &middot; Kuadran Laba vs Arus Kas Operasional (CFO)</h2>
+          <div class="panel-sub" id="frQuadSub"></div>
+          <div class="fr-quad-ctl">
+            <label for="frMetric">Ukuran laba</label>
+            <select id="frMetric" aria-label="Ukuran laba">
+              <option value="EBITDA" selected>EBITDA</option>
+              <option value="EBIT">EBIT</option>
+              <option value="EBIT (+Mangement)">EBIT setelah Biaya Management</option>
+              <option value="NPM">Net Profit (NPM)</option>
+            </select>
+            <label class="fr-check"><input type="checkbox" id="frProv" checked> Sertakan bulan yang belum tutup buku (indikasi sementara)</label>
+          </div>
+          <div class="fr-quad" id="frQuadGrid"></div>
+          <div class="fr-scroll" style="margin-top:18px"><table class="fr-table" id="frQuadTable"></table></div>
+          <div class="fr-note">
+            <b>Kuadran I</b> laba (+) &amp; CFO (+): laba sudah menjadi kas &middot; <b>Kuadran II</b> laba (+) tetapi CFO (&minus;): laba belum menjadi kas (umumnya tertahan di piutang/persediaan atau pembayaran ke vendor) &middot; <b>Kuadran III</b> laba (&minus;) tetapi CFO (+): rugi tercatat namun kas operasi masih masuk &middot; <b>Kuadran IV</b> laba (&minus;) &amp; CFO (&minus;): paling kritis.<br>
+            Bulan dengan nilai tepat nol dihitung (+). Arahkan kursor ke nama bulan untuk melihat nilai laba dan CFO. Rentang waktu mengikuti filter di atas.<span id="frQuadPending"></span>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 
@@ -13408,6 +13618,410 @@ window.__EXTRA__ = {
     `).join('');
   })();
 
+})();
+
+</script>
+<script>
+// ============ ANALISIS LAPORAN KEUANGAN (rasio profitabilitas, likuiditas, aktivitas, arus kas) ============
+// Dihitung saat halaman dibuka langsung dari window.__DATA__ (pnlData, lpk, cfDetailRaw, saldoRaw),
+// sehingga otomatis ikut ter-update setiap kali data CSV diganti. Rentang waktu dipilih lewat filter "Dari ... s.d ...".
+(function () {
+  'use strict';
+  const root = document.getElementById('dash-finratio');
+  if (!root) return;
+  const D = window.__DATA__ || {};
+  const MN = ['Jan','Feb','Mar','Apr','Mei','Jun','Jul','Agu','Sep','Okt','Nov','Des'];
+  const MN_FULL = ['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
+  const isNum = v => typeof v === 'number' && isFinite(v);
+  const div = (a, b) => (isNum(a) && isNum(b) && b !== 0) ? a / b : null;
+  const sumOf = arr => arr.reduce((s, v) => s + (isNum(v) ? v : 0), 0);
+  const roundTo = (v, d) => { const p = Math.pow(10, d); return Math.round(v * p) / p + 0; };
+  const fmtDec = (v, d) => isNum(v) ? roundTo(v, d).toLocaleString('id-ID', { minimumFractionDigits: d, maximumFractionDigits: d }) : '–';
+  const fmtJt  = v => isNum(v) ? (Math.round(v / 1e6) + 0).toLocaleString('id-ID') : '–';
+  const fmtPct = v => isNum(v) ? fmtDec(v * 100, 1) + '%' : '–';
+  const fmtX   = v => isNum(v) ? fmtDec(v, 2) + 'x' : '–';
+  const fmtDay = v => isNum(v) ? fmtDec(v, 1) : '–';
+  const isNeg  = t => { const c = String(t).charAt(0); return c === '-' || c === '\u2212'; };
+  const monthIdx = m => MN.indexOf(String(m).slice(0, 3));
+  const daysIn = (y, mi) => new Date(y, mi + 1, 0).getDate();
+  const setText = (id, t) => { const e = document.getElementById(id); if (e) e.textContent = t; };
+  const setHtml = (id, t) => { const e = document.getElementById(id); if (e) e.innerHTML = t; };
+
+  function render(id, head, rows) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const n = head.length;
+    const th = head.map((c, i) => '<th class="' + (i ? 'num' : '') + (/^(YTD|Periode|Total)/.test(c) ? ' fr-ytd' : '') + '">' + c + '</th>').join('');
+    const tb = rows.map(r => {
+      if (r.group) return '<tr class="fr-group"><td colspan="' + n + '">' + r.label + '</td></tr>';
+      const tds = r.cells.map((t, i) => '<td class="num' + (isNeg(t) && !r.noNeg ? ' neg' : '') + (i === r.cells.length - 1 && r.ytd ? ' fr-ytd' : '') + '">' + t + '</td>').join('');
+      return '<tr class="' + (r.cls || '') + '"><td>' + r.label + '</td>' + tds + '</tr>';
+    }).join('');
+    el.innerHTML = '<thead><tr>' + th + '</tr></thead><tbody>' + tb + '</tbody>';
+  }
+  function empty(id, msg) { const el = document.getElementById(id); if (el) el.innerHTML = '<tbody><tr><td class="fr-empty">' + msg + '</td></tr></tbody>'; }
+
+  // ---------- periode tutup buku (mengikuti bulan terakhir Balance Sheet) ----------
+  const lpk = D.lpk;
+  let year = new Date().getFullYear(), cols = [], openM = null;
+  if (lpk && lpk.latestMonth && Array.isArray(lpk.months)) {
+    const yy = String(lpk.latestMonth).slice(-2);
+    year = 2000 + parseInt(yy, 10);
+    cols = lpk.months.filter(m => String(m).slice(-2) === yy);
+    openM = lpk.months.find(m => m === 'Des ' + String(year - 1).slice(-2)) || null;
+  }
+  setText('frYear', String(year));
+  if (cols.length) setText('frAsOf', MN_FULL[monthIdx(cols[cols.length - 1])] + ' ' + year);
+
+  // ---------- akses data ----------
+  const PNL = (D.pnlData && D.pnlData.data) || {};
+  // Hitungan berantai yang sama dengan halaman Profit & Loss (EBITDA -> EBIT -> EBIT+Management -> NPM),
+  // dihitung pada salinan lokal sehingga tidak bergantung pada urutan eksekusi script lain.
+  // Bulan yang belum terisi di data Laba Rugi (Pendapatan Bruto, HPP & Total Biaya Entitas semuanya 0) dianggap "tidak ada data" -> tampil "–".
+  const pnlCache = {};
+  const pnlRow = m => {
+    const key = year + '-' + (monthIdx(m) + 1);
+    if (key in pnlCache) return pnlCache[key];
+    const o = PNL[key];
+    let r = null;
+    if (o && ((o['Pendapatan Bruto'] || 0) !== 0 || (o['HPP'] || 0) !== 0 || (o['Total Biaya Entitas'] || 0) !== 0)) {
+      r = Object.assign({}, o);
+      const has = k => Object.prototype.hasOwnProperty.call(r, k);
+      if (has('GP') && has('Total Biaya Entitas')) r['EBITDA'] = r['GP'] - r['Total Biaya Entitas'];
+      if (has('EBITDA') && has('Depreciation & Amortization')) r['EBIT'] = r['EBITDA'] - r['Depreciation & Amortization'];
+      if (has('EBIT') && has('Total Biaya Management')) r['EBIT (+Mangement)'] = r['EBIT'] - r['Total Biaya Management'];
+      if (has('EBIT (+Mangement)') && has('Pendapatan Lain') && has('Biaya Lain')) r['NPM'] = r['EBIT (+Mangement)'] + r['Pendapatan Lain'] - r['Biaya Lain'];
+    }
+    pnlCache[key] = r;
+    return r;
+  };
+  const pv = (m, k) => { const o = pnlRow(m); return (o && isNum(o[k])) ? o[k] : null; };
+  const pSum = (m, keys) => { const v = keys.map(k => pv(m, k)).filter(isNum); return v.length ? sumOf(v) : null; };
+  const lap = (name, m) => ((lpk && lpk.detail) || []).filter(r => r.laporanBulanan === name).reduce((s, r) => s + (isNum(r.values && r.values[m]) ? r.values[m] : 0), 0);
+  const stot = (name, m) => { const o = lpk && lpk.subtotals && lpk.subtotals[name]; return (o && isNum(o[m])) ? o[m] : null; };
+  const kas = m => lap('Kas & Bank', m);
+  const piu = m => lap('Piutang Dagang', m) + lap('Piutang Lain', m);
+  const per = m => lap('Persediaan', m);
+  const AL = m => stot('Aset Lancar', m), LL = m => stot('Liabilitas Lancar', m);
+  const ocl = m => { const a = AL(m); return isNum(a) ? a - kas(m) - piu(m) - per(m) : null; };
+
+  const CF = Array.isArray(D.cfDetailRaw) ? D.cfDetailRaw : [];
+  const findRow = prefix => CF.find(r => r && r[2] && String(r[2]).trim().indexOf(prefix) === 0) || null;
+  const rowVals = r => r ? Array.from({ length: 12 }, (_, i) => { const v = parseFloat(r[4 + i]); return isFinite(v) ? v : 0; }) : null;
+  const rowLabel = r => r ? String(r[2]).split('|').slice(1).join('|').trim() : '';
+  const kenaikan = rowVals(findRow('Kenaikan'));
+  const vOpsAll = rowVals(findRow('Arus Kas Bersih dari Aktivitas Operasi'));
+  const METRICS = { 'EBITDA': 'EBITDA', 'EBIT': 'EBIT', 'EBIT (+Mangement)': 'EBIT setelah Biaya Management', 'NPM': 'Net Profit (NPM)' };
+  let cfLast = -1, cfPartial = null;
+  if (kenaikan) {
+    cfLast = 0; kenaikan.forEach((v, i) => { if (v !== 0) cfLast = i; });
+    const sal = Array.isArray(D.saldoRaw) ? D.saldoRaw : [];
+    let lastTx = null;
+    for (let i = sal.length - 1; i >= 0; i--) { if (sal[i].debit !== 0 || sal[i].kredit !== 0) { lastTx = sal[i].date; break; } }
+    if (lastTx && /^\d{4}-\d{2}-\d{2}$/.test(lastTx)) {
+      const ly = parseInt(lastTx.slice(0, 4), 10), lm = parseInt(lastTx.slice(5, 7), 10) - 1, ld = parseInt(lastTx.slice(8, 10), 10);
+      if (ly === year && lm === cfLast && ld < daysIn(ly, lm)) cfPartial = { day: ld, text: MN_FULL[lm] + ' ' + ly + ' baru berjalan s.d ' + ld + ' ' + MN_FULL[lm] + ' (data transaksi kas terakhir)' };
+    }
+    setText('frCfAsOf', 'Arus kas s.d ' + MN_FULL[cfLast] + ' ' + year + (cfPartial ? ' (parsial)' : ''));
+  }
+
+  // ---------- rentang waktu ----------
+  const ratioMax = cols.length ? monthIdx(cols[cols.length - 1]) : -1;
+  const maxIdx = Math.max(ratioMax, cfLast);
+  const state = { from: 0, to: Math.max(maxIdx, 0), metric: 'EBITDA', prov: true };
+  const fromSel = document.getElementById('frFrom'), toSel = document.getElementById('frTo'), resetBtn = document.getElementById('frReset');
+  if (fromSel && toSel && maxIdx >= 0) {
+    let opts = '';
+    for (let i = 0; i <= maxIdx; i++) opts += '<option value="' + i + '">' + MN_FULL[i] + ' ' + year + '</option>';
+    fromSel.innerHTML = opts; toSel.innerHTML = opts;
+    fromSel.value = String(state.from); toSel.value = String(state.to);
+    fromSel.addEventListener('change', () => { state.from = parseInt(fromSel.value, 10); if (state.from > state.to) { state.to = state.from; toSel.value = String(state.to); } renderAll(); });
+    toSel.addEventListener('change', () => { state.to = parseInt(toSel.value, 10); if (state.to < state.from) { state.from = state.to; fromSel.value = String(state.from); } renderAll(); });
+    if (resetBtn) resetBtn.addEventListener('click', () => { state.from = 0; state.to = maxIdx; fromSel.value = '0'; toSel.value = String(maxIdx); renderAll(); });
+  }
+  const metricSel = document.getElementById('frMetric'), provChk = document.getElementById('frProv');
+  if (metricSel) metricSel.addEventListener('change', () => { state.metric = metricSel.value; renderQuad(); });
+  if (provChk) provChk.addEventListener('change', () => { state.prov = provChk.checked; renderQuad(); });
+  const inSel = i => i >= state.from && i <= state.to;
+
+  // ---------- 6. KUADRAN LABA vs CFO ----------
+  function renderQuad() {
+    const grid = document.getElementById('frQuadGrid');
+    if (!grid) return;
+    const mKey = state.metric, mLabel = METRICS[mKey] || mKey;
+    setHtml('frQuadSub', 'Sumbu vertikal: laba = <b>' + mLabel + '</b> (Laba Rugi) &middot; sumbu horizontal: CFO = Arus Kas Bersih Operasional');
+    const idxs = [];
+    if (vOpsAll) for (let i = state.from; i <= Math.min(state.to, cfLast); i++) idxs.push(i);
+    if (!idxs.length) {
+      grid.innerHTML = '<div class="fr-empty" style="grid-column:1 / -1">Tidak ada data arus kas operasional pada rentang ini.</div>';
+      empty('frQuadTable', 'Tidak ada data pada rentang ini.');
+      setHtml('frQuadPending', '');
+      return;
+    }
+    const closedMap = {}; cols.forEach(m => { closedMap[monthIdx(m)] = m; });
+    const pts = idxs.map(i => {
+      const closed = closedMap[i] !== undefined;
+      const partial = !!cfPartial && i === cfLast;                       // bulan berjalan belum penuh -> tidak pernah diklasifikasi
+      const mName = closed ? closedMap[i] : MN[i] + ' ' + String(year).slice(-2);
+      const profit = (!partial && (closed || state.prov)) ? pv(mName, mKey) : null;
+      const cfo = vOpsAll[i];
+      let q = null;
+      if (isNum(profit) && isNum(cfo)) q = profit >= 0 ? (cfo >= 0 ? 1 : 2) : (cfo >= 0 ? 3 : 4);
+      const noPnl = !partial && (closed || state.prov) && !pnlRow(mName);
+      return { i: i, closed: closed, partial: partial, profit: profit, cfo: cfo, q: q, noPnl: noPnl };
+    });
+    const shown = pts.filter(p => p.q !== null);
+    const pend = pts.filter(p => p.q === null);
+    const chip = p => '<span class="fr-chip' + (p.closed ? '' : ' prov') + '" title="' + MN[p.i] + ' ' + year + ' &middot; Laba Rp ' + fmtJt(p.profit) + ' jt &middot; CFO Rp ' + fmtJt(p.cfo) + ' jt' + (p.closed ? '' : ' &middot; sementara (belum tutup buku)') + '">' + MN[p.i].toUpperCase() + (p.closed ? '' : '*') + '</span>';
+    const quad = (n, title, sub, cls) => {
+      const L = shown.filter(p => p.q === n);
+      return '<div class="fr-q ' + cls + '"><div class="fr-q-head"><span class="fr-q-title">' + title + '</span><span class="fr-q-count">' + L.length + ' bln</span></div>' +
+        '<div class="fr-q-sub">' + sub + '</div><div class="fr-q-months">' + (L.length ? L.map(chip).join('') : '<span class="fr-q-none">&ndash;</span>') + '</div></div>';
+    };
+    grid.innerHTML =
+      '<div class="fr-qa fr-qa-top">PROFIT (+)</div>' +
+      '<div class="fr-qa fr-qa-left">CFO (&minus;)</div>' +
+      '<div class="fr-qgrid">' +
+        quad(2, 'KUADRAN II', 'Laba (+) &middot; CFO (&minus;)', 'q2') + quad(1, 'KUADRAN I', 'Laba (+) &middot; CFO (+)', 'q1') +
+        quad(4, 'KUADRAN IV', 'Laba (&minus;) &middot; CFO (&minus;)', 'q4') + quad(3, 'KUADRAN III', 'Laba (&minus;) &middot; CFO (+)', 'q3') +
+      '</div>' +
+      '<div class="fr-qa fr-qa-right">CFO (+)</div>' +
+      '<div class="fr-qa fr-qa-bottom">PROFIT (&minus;)</div>';
+    const RN = { 1: 'I', 2: 'II', 3: 'III', 4: 'IV' };
+    render('frQuadTable', ['Rp juta'].concat(pts.map(p => MN[p.i] + (p.closed ? '' : '*'))), [
+      { label: mLabel + ' (Rp juta)', cells: pts.map(p => fmtJt(p.profit)) },
+      { label: 'CFO &mdash; Arus Kas Operasional (Rp juta)', cells: pts.map(p => fmtJt(p.cfo)) },
+      { label: 'Kuadran', cls: 'fr-key', cells: pts.map(p => p.q ? RN[p.q] + (p.closed ? '' : '*') : '–') }
+    ]);
+    let msg = '';
+    const pendNoPnl = pend.filter(p => p.noPnl);
+    const pendClosedLess = pend.filter(p => !p.partial && !p.noPnl), pendPartial = pend.filter(p => p.partial);
+    if (pendNoPnl.length) msg += '<br><b>Belum diklasifikasi (data Laba Rugi belum terisi):</b> ' + pendNoPnl.map(p => MN[p.i] + ' (CFO Rp ' + fmtJt(p.cfo) + ' jt)').join(', ') + '.';
+    if (pendClosedLess.length) msg += '<br><b>Belum diklasifikasi (laba belum tutup buku):</b> ' + pendClosedLess.map(p => MN[p.i] + ' (CFO Rp ' + fmtJt(p.cfo) + ' jt)').join(', ') + '. Centang &ldquo;Sertakan bulan yang belum tutup buku&rdquo; untuk indikasi sementara.';
+    if (pendPartial.length) msg += '<br><b>Tidak diklasifikasi:</b> ' + pendPartial.map(p => MN[p.i]).join(', ') + ' &mdash; bulan masih berjalan' + (cfPartial ? ' (data s.d ' + cfPartial.day + ' ' + MN_FULL[cfLast] + ')' : '') + ', CFO belum mewakili satu bulan penuh (CFO sementara Rp ' + fmtJt(pendPartial[0].cfo) + ' jt).';
+    if (shown.some(p => !p.closed)) msg += '<br><b>*</b> Indikasi sementara: bulan setelah tutup buku terakhir (' + (cols.length ? MN_FULL[ratioMax] + ' ' + year : '-') + ') memakai angka Laba Rugi yang belum final.';
+    setHtml('frQuadPending', msg);
+  }
+
+  function renderAll() {
+    const selCols = cols.filter(m => inSel(monthIdx(m)));
+    const aggName = state.from === 0 ? 'YTD' : 'Periode';
+    const lastClosed = cols.length ? MN_FULL[ratioMax] + ' ' + year : '-';
+    const noClosed = 'Tidak ada data tutup buku pada rentang ini (rasio tersedia s.d ' + lastClosed + ').';
+
+    // rentang & catatan ketersediaan data
+    const lbl = MN_FULL[state.from] + ' ' + year + (state.from === state.to ? '' : ' s.d ' + MN_FULL[state.to] + ' ' + year);
+    let note = '<b>Rentang ditampilkan:</b> ' + lbl + '. Tabel 1&ndash;4 tersedia s.d ' + lastClosed + ' (tutup buku)' + (cfLast >= 0 ? '; tabel 5 s.d ' + MN_FULL[cfLast] + ' ' + year : '') + '.';
+    if (state.to > ratioMax && ratioMax >= 0) note += ' Bulan setelah ' + MN_FULL[ratioMax] + ' belum ditampilkan pada tabel 1&ndash;4 karena belum tutup buku.';
+    const noPnlM = selCols.filter(m => !pnlRow(m));
+    if (noPnlM.length) note += ' <b>Catatan:</b> data Laba Rugi ' + noPnlM.map(m => m.slice(0, 3)).join(', ') + ' belum terisi di sumber data, sehingga tabel 1 &amp; 3 (dan laba pada tabel 6) tampil &ldquo;&ndash;&rdquo;.';
+    setHtml('frFilterNote', note);
+
+    // ---------- 1. PROFITABILITAS ----------
+    if (!selCols.length) {
+      empty('frProfTable', cols.length ? noClosed : 'Data Laba Rugi / Balance Sheet belum tersedia.');
+    } else {
+      const bruto = m => pv(m, 'Pendapatan Bruto');
+      const specs = [
+        { label: 'Pendapatan Bruto (Rp juta)', cls: 'fr-key', jt: true, f: m => bruto(m) },
+        { label: 'Diskon &amp; Retur', f: m => pv(m, 'Diskon & Retur') },
+        { label: 'Pendapatan Netto', f: m => pv(m, 'Pendapatan Netto') },
+        { label: 'HPP', f: m => pv(m, 'HPP') },
+        { label: 'Gross Profit (GP)', cls: 'fr-key', f: m => pv(m, 'GP') },
+        { label: 'Total Biaya Entitas', f: m => pv(m, 'Total Biaya Entitas') },
+        { label: 'Biaya Marketing', cls: 'fr-sub', f: m => pSum(m, ['Gaji Marketing', 'SPPD Marketing', 'Marketing Lainnya']) },
+        { label: 'Biaya Adum &amp; Operasional', cls: 'fr-sub', f: m => pSum(m, ['Gaji Adum', 'SPPD Adum', 'Operasional', 'Adum Lainnya']) },
+        { label: 'EBITDA', cls: 'fr-key', f: m => pv(m, 'EBITDA') },
+        { label: 'EBIT', f: m => pv(m, 'EBIT') },
+        { label: 'EBIT setelah Biaya Management', f: m => pv(m, 'EBIT (+Mangement)') },
+        { label: 'Net Profit (NPM)', cls: 'fr-key', f: m => pv(m, 'NPM') }
+      ];
+      const rows = specs.map(s => {
+        let cells, agg;
+        if (s.jt) {
+          cells = selCols.map(m => fmtJt(s.f(m)));
+          const vv = selCols.map(m => s.f(m)).filter(isNum);
+          agg = vv.length ? fmtJt(sumOf(vv)) : '–';
+        } else {
+          cells = selCols.map(m => fmtPct(div(s.f(m), bruto(m))));
+          const ok = selCols.filter(m => isNum(s.f(m)) && isNum(bruto(m)));
+          agg = fmtPct(div(sumOf(ok.map(m => s.f(m))), sumOf(ok.map(m => bruto(m)))));
+        }
+        return { label: s.label, cls: s.cls, cells: cells.concat([agg]), ytd: true };
+      });
+      render('frProfTable', ['Rasio (% dari Pendapatan Bruto)'].concat(selCols.map(m => m.slice(0, 3)), [aggName]), rows);
+    }
+
+    // ---------- 2. LIKUIDITAS ----------
+    if (!selCols.length) {
+      empty('frLiqTable', cols.length ? noClosed : 'Data Balance Sheet belum tersedia.');
+    } else {
+      const lc = (openM && state.from === 0 ? [openM] : []).concat(selCols);
+      const mk = (label, f, fmt, cls) => ({ label: label, cls: cls, cells: lc.map(m => fmt(f(m))) });
+      const rows = [
+        { group: true, label: 'Komponen (Rp juta)' },
+        mk('Kas &amp; Bank', kas, fmtJt),
+        mk('Piutang (Dagang + Lain-lain)', piu, fmtJt),
+        mk('Persediaan', per, fmtJt),
+        mk('Aset Lancar Lainnya', ocl, fmtJt),
+        mk('Aset Lancar', AL, fmtJt, 'fr-key'),
+        mk('Liabilitas Lancar', LL, fmtJt, 'fr-key'),
+        mk('Net Working Capital / Modal Kerja Bersih (Aset Lancar &minus; Liabilitas Lancar)', m => (isNum(AL(m)) && isNum(LL(m))) ? AL(m) - LL(m) : null, fmtJt),
+        { group: true, label: 'Rasio Likuiditas' },
+        mk('Current Ratio', m => div(AL(m), LL(m)), fmtX, 'fr-key'),
+        mk('Quick Ratio', m => isNum(LL(m)) ? div(kas(m) + piu(m), LL(m)) : null, fmtX, 'fr-key'),
+        mk('Cash Ratio', m => isNum(LL(m)) ? div(kas(m), LL(m)) : null, fmtX, 'fr-key')
+      ];
+      render('frLiqTable', ['Pos (Rp juta) / Rasio'].concat(lc), rows);
+    }
+
+    // ---------- 3. AKTIVITAS ----------
+    if (!selCols.length) {
+      empty('frActTable', cols.length ? noClosed : 'Data Laba Rugi / Balance Sheet belum tersedia.');
+    } else {
+      const bal = { ar: m => lap('Piutang Dagang', m), inv: m => lap('Persediaan', m), ap: m => lap('Hutang Dagang', m), ta: m => stot('Total Aset', m) };
+      const prevOf = i => i === 0 ? openM : cols[i - 1];
+      const avgBal = (fn, i) => {
+        const b = fn(cols[i]); if (!isNum(b)) return null;
+        const p = prevOf(i); const a = p ? fn(p) : null;
+        return isNum(a) ? (a + b) / 2 : b;
+      };
+      // dihitung untuk SEMUA bulan tutup buku (saldo awal bulan pertama terpilih = saldo akhir bulan sebelumnya), lalu disaring
+      const perAll = cols.map((m, i) => ({
+        mi: monthIdx(m), days: daysIn(year, monthIdx(m)),
+        net: pv(m, 'Pendapatan Netto'), hpp: pv(m, 'HPP'),
+        ar: avgBal(bal.ar, i), inv: avgBal(bal.inv, i), ap: avgBal(bal.ap, i), ta: avgBal(bal.ta, i)
+      }));
+      const per_ = perAll.filter(p => inSel(p.mi));
+      const mean = k => { const v = per_.map(p => p[k]).filter(isNum); return v.length ? sumOf(v) / v.length : null; };
+      const agg = {
+        days: sumOf(per_.map(p => p.days)),
+        net: per_.some(p => isNum(p.net)) ? sumOf(per_.map(p => p.net)) : null, hpp: per_.some(p => isNum(p.hpp)) ? sumOf(per_.map(p => p.hpp)) : null,
+        ar: mean('ar'), inv: mean('inv'), ap: mean('ap'), ta: mean('ta')
+      };
+      const all = per_.concat([agg]);
+      const dso = p => { const t = div(p.ar, p.net); return isNum(t) ? t * p.days : null; };
+      const dio = p => { const t = div(p.inv, p.hpp); return isNum(t) ? t * p.days : null; };
+      const dpo = p => { const t = div(p.ap, p.hpp); return isNum(t) ? t * p.days : null; };
+      const ccc = p => (isNum(dso(p)) && isNum(dio(p)) && isNum(dpo(p))) ? dso(p) + dio(p) - dpo(p) : null;
+      const row = (label, f, fmt, cls) => ({ label: label, cls: cls, cells: all.map(p => fmt(f(p))), ytd: true });
+      const rows = [
+        { group: true, label: 'Dasar perhitungan (Rp juta)' },
+        row('Pendapatan Netto', p => p.net, fmtJt),
+        row('HPP', p => p.hpp, fmtJt),
+        row('Rata-rata Piutang Dagang', p => p.ar, fmtJt),
+        row('Rata-rata Persediaan', p => p.inv, fmtJt),
+        row('Rata-rata Hutang Dagang', p => p.ap, fmtJt),
+        row('Rata-rata Total Aset', p => p.ta, fmtJt),
+        { group: true, label: 'Rasio Aktivitas' },
+        row('Perputaran Piutang (x)', p => div(p.net, p.ar), fmtX),
+        row('DSO &mdash; Hari Penagihan Piutang (hari)', dso, fmtDay, 'fr-key'),
+        row('Perputaran Persediaan (x)', p => div(p.hpp, p.inv), fmtX),
+        row('DIO &mdash; Hari Persediaan (hari)', dio, fmtDay, 'fr-key'),
+        row('Perputaran Hutang Dagang (x)', p => div(p.hpp, p.ap), fmtX),
+        row('DPO &mdash; Hari Pembayaran Hutang (hari)', dpo, fmtDay, 'fr-key'),
+        row('Siklus Konversi Kas / CCC (hari)', ccc, fmtDay, 'fr-key'),
+        row('Perputaran Total Aset (x)', p => div(p.net, p.ta), fmtX)
+      ];
+      render('frActTable', ['Rasio'].concat(per_.map(p => MN[p.mi]), [aggName + ' (' + per_.length + ' bln)']), rows);
+    }
+
+    // ---------- 4. NET WORKING CAPITAL ----------
+    if (!selCols.length) {
+      empty('frNwcTable', cols.length ? noClosed : 'Data Balance Sheet belum tersedia.');
+      setHtml('frNwcSummary', '');
+    } else {
+      const seq = (openM ? [openM] : []).concat(cols);                    // seluruh bulan neraca, berurutan
+      const lc = (openM && state.from === 0 ? [openM] : []).concat(selCols);
+      const ar = m => lap('Piutang Dagang', m), inv = m => lap('Persediaan', m), ap = m => lap('Hutang Dagang', m);
+      const nwc = m => (isNum(AL(m)) && isNum(LL(m))) ? AL(m) - LL(m) : null;
+      const twc = m => ar(m) + inv(m) - ap(m);
+      const prevM = m => { const k = seq.indexOf(m); return k > 0 ? seq[k - 1] : null; };
+      const delta = f => m => { const p = prevM(m); if (!p) return null; const a = f(m), b = f(p); return (isNum(a) && isNum(b)) ? a - b : null; };
+      const netto = m => (m === openM) ? null : pv(m, 'Pendapatan Netto');
+      const cfoOf = m => (m === openM || !vOpsAll) ? null : vOpsAll[monthIdx(m)];
+      const mk = (label, f, fmt, cls, noNeg) => ({ label: label, cls: cls, noNeg: noNeg, cells: lc.map(m => fmt(f(m))) });
+      const rows = [
+        { group: true, label: 'Net Working Capital (Rp juta)' },
+        mk('Aset Lancar', AL, fmtJt),
+        mk('Liabilitas Lancar', LL, fmtJt),
+        mk('Net Working Capital (NWC) = Aset Lancar &minus; Liabilitas Lancar', nwc, fmtJt, 'fr-key'),
+        mk('NWC di luar Kas &amp; Bank', m => isNum(nwc(m)) ? nwc(m) - kas(m) : null, fmtJt),
+        { group: true, label: 'Modal kerja dagang (Rp juta)' },
+        mk('Piutang Dagang', ar, fmtJt),
+        mk('Persediaan', inv, fmtJt),
+        mk('Hutang Dagang (pengurang)', ap, fmtJt),
+        mk('Modal Kerja Dagang = Piutang + Persediaan &minus; Hutang', twc, fmtJt, 'fr-key'),
+        { group: true, label: 'Rasio &amp; perubahan' },
+        mk('NWC &divide; Total Aset', m => div(nwc(m), stot('Total Aset', m)), fmtPct),
+        mk('NWC &divide; Pendapatan Netto setahun (Netto bulan &times; 12)', m => { const n = netto(m); return isNum(n) ? div(nwc(m), n * 12) : null; }, fmtPct),
+        mk('Kenaikan (Penurunan) NWC vs bulan sebelumnya', delta(nwc), fmtJt, 'fr-key', true),
+        mk('Kenaikan (Penurunan) Modal Kerja Dagang', delta(twc), fmtJt, null, true),
+        mk('Memo: CFO &mdash; Arus Kas Operasional', cfoOf, fmtJt, 'fr-memo')
+      ];
+      render('frNwcTable', ['Pos (Rp juta) / Rasio'].concat(lc), rows);
+      const pFirst = prevM(selCols[0]), lastM = selCols[selCols.length - 1];
+      if (pFirst && isNum(nwc(pFirst)) && isNum(nwc(lastM))) {
+        const d = nwc(lastM) - nwc(pFirst);
+        setHtml('frNwcSummary', '<br><b>Rentang ini:</b> NWC ' + (d >= 0 ? 'naik' : 'turun') + ' Rp ' + fmtJt(Math.abs(d)) + ' jt, dari Rp ' + fmtJt(nwc(pFirst)) + ' jt (akhir ' + pFirst + ') menjadi Rp ' + fmtJt(nwc(lastM)) + ' jt (akhir ' + lastM + ')' + (d >= 0 ? ' &mdash; kas tertahan di modal kerja.' : ' &mdash; modal kerja melepas kas.'));
+      } else setHtml('frNwcSummary', '');
+    }
+
+    // ---------- 5. ARUS KAS ----------
+    const idxs = [];
+    if (kenaikan) for (let i = state.from; i <= Math.min(state.to, cfLast); i++) idxs.push(i);
+    if (!kenaikan) {
+      empty('frCfTable', 'Data arus kas belum tersedia.');
+      setHtml('frCfPartial', '');
+    } else if (!idxs.length) {
+      empty('frCfTable', 'Tidak ada data arus kas pada rentang ini (tersedia s.d ' + MN_FULL[cfLast] + ' ' + year + ').');
+      setHtml('frCfPartial', '');
+    } else {
+      const showPartial = !!cfPartial && idxs.indexOf(cfLast) >= 0;
+      const hdr = idxs.map(i => MN[i] + (showPartial && i === cfLast ? '*' : ''));
+      const flow = (label, r, cls) => {
+        const v = rowVals(r);
+        return { label: label, cls: cls, ytd: true, cells: v ? idxs.map(i => fmtJt(v[i])).concat([fmtJt(sumOf(idxs.map(i => v[i])))]) : idxs.map(() => '–').concat(['–']) };
+      };
+      const lbl2 = (prefix, fallback) => rowLabel(findRow(prefix)) || fallback;
+      const lblFin = (prefix, fallback) => { const t = lbl2(prefix, fallback); return t.indexOf('Pendanaan') < 0 ? t + ' Pendanaan' : t; };
+      const rOps = findRow('Arus Kas Bersih dari Aktivitas Operasi');
+      const rInv = findRow('Arus Kas Bersih dari Aktivitas Investasi');
+      const rFin = findRow('Arus Kas Bersih dari Aktivitas Pendanaan');
+      const vOps = rowVals(rOps), vInv = rowVals(rInv);
+      const vBeg = rowVals(findRow('Saldo Awal')), vEnd = rowVals(findRow('Saldo Akhir'));
+      const firstI = idxs[0], lastI = idxs[idxs.length - 1];
+      const rows = [
+        { group: true, label: 'A. Aktivitas Operasional' },
+        flow(lbl2('A1 |', 'Penerimaan'), findRow('A1 |'), 'fr-sub'),
+        flow(lbl2('A2 |', 'Pengeluaran'), findRow('A2 |'), 'fr-sub'),
+        flow('Arus Kas Bersih Operasional', rOps, 'fr-key'),
+        { group: true, label: 'B. Aktivitas Investasi' },
+        flow(lbl2('B1 |', 'Transaksi Aset'), findRow('B1 |'), 'fr-sub'),
+        flow(lbl2('B2 |', 'Transaksi Investasi'), findRow('B2 |'), 'fr-sub'),
+        flow('Arus Kas Bersih Investasi', rInv, 'fr-key'),
+        { group: true, label: 'C. Aktivitas Pendanaan' },
+        flow(lblFin('C1 |', 'Penerimaan Pendanaan'), findRow('C1 |'), 'fr-sub'),
+        flow(lblFin('C2 |', 'Pengeluaran Pendanaan'), findRow('C2 |'), 'fr-sub'),
+        flow('Arus Kas Bersih Pendanaan', rFin, 'fr-key'),
+        { group: true, label: 'Rekonsiliasi Kas' },
+        flow('Kenaikan (Penurunan) Kas Bersih', findRow('Kenaikan'), 'fr-key'),
+        { label: 'Saldo Awal Kas', cells: vBeg ? idxs.map(i => fmtJt(vBeg[i])).concat([fmtJt(vBeg[firstI])]) : [], ytd: true },
+        { label: 'Saldo Akhir Kas', cls: 'fr-key', cells: vEnd ? idxs.map(i => fmtJt(vEnd[i])).concat([fmtJt(vEnd[lastI])]) : [], ytd: true },
+        (vOps && vInv) ? { label: 'Memo: Arus Kas Bebas (Operasional + Investasi)', cls: 'fr-memo', ytd: true,
+          cells: idxs.map(i => fmtJt(vOps[i] + vInv[i])).concat([fmtJt(sumOf(idxs.map(i => vOps[i] + vInv[i])))]) } : null
+      ].filter(Boolean);
+      render('frCfTable', ['Rp juta'].concat(hdr, ['Total']), rows);
+      setHtml('frCfPartial', (showPartial ? '<br><b>* ' + cfPartial.text + '.</b> ' : '<br>') + 'Kolom Total = akumulasi bulan yang tampil; Saldo Awal Total = saldo awal bulan pertama yang tampil.');
+    }
+    renderQuad();
+  }
+
+  if (maxIdx < 0) {
+    ['frProfTable', 'frLiqTable', 'frActTable', 'frNwcTable', 'frCfTable', 'frQuadTable'].forEach(id => empty(id, 'Data belum tersedia.'));
+  } else {
+    renderAll();
+  }
 })();
 
 </script>
